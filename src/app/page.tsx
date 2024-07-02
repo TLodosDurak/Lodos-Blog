@@ -1,34 +1,28 @@
-import Image from "next/image";
+import Link from "next/link"
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { JSX, SVGProps } from "react"
+import NavbarCustom from "@/components/NavbarCustom"
+import HeroCustom from "@/components/HeroCustom"
+import BlogGrid from "@/components/BlogGrid"
+import FooterCustom from "@/components/FooterCustom"
 
-export default function Home() {
+export default function Component() {
   return (
-    <main className="min-h-screen flex flex-col">
-      <nav className="h-12 fixed left-0 top-0 w-full border-b backdrop-blur-2xl"></nav>
-
-      <div className=" w-32">
-        <div className="mt-32">
-          <h1 className=" text-4xl text text-secondary-foreground text-pretty ">Blog</h1>
-        </div>
-        <div className="w-10 h-10">
-          
-        </div>
-        <div className="h-10">
-          
-        </div>
-        <div className="w-10 h-10">
-          
-        </div>
-        <div className="w-10 h-10">
-          
-        </div>
-        <div className="w-10 h-10">
-          
-        </div>
-        <div className="w-10 h-10">
-          
-        </div>
-      </div>
-    </main>
-
-  );
+    <div className="flex flex-col min-h-dvh">
+      <NavbarCustom/>
+      <main className="flex-1">
+        <section className="w-full pt-12 md:pt-24 lg:pt-32">
+          <HeroCustom/>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <BlogGrid/>
+        </section>
+      </main>
+      <FooterCustom/>
+    </div>
+  )
 }
+
+
