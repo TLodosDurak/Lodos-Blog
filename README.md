@@ -1,4 +1,4 @@
-# Lodos's Blog
+# Lodos' Blog
 
 ## Welcome to My Blog page, or atleast its source code. Its an outlet for me to create, record, and learn all things that I love.
 

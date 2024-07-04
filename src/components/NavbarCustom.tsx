@@ -9,7 +9,7 @@ export default function NavbarCustom() {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-2xl border-b-2">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
           <AnimatedLogo className="h-12 w-12" />
           <span>Lodos' Blog</span>
         </Link>
@@ -27,7 +27,7 @@ export default function NavbarCustom() {
                 Latest
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 prefetch={false}
               >
@@ -35,7 +35,7 @@ export default function NavbarCustom() {
                 Portfolio
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 prefetch={false}
               >
@@ -46,13 +46,13 @@ export default function NavbarCustom() {
           </SheetContent>
         </Sheet>
         <nav className="hidden gap-6 text-sm font-medium lg:flex">
-          <Link href="#" className="text-foreground" prefetch={false}>
+          <Link href="/" className="text-foreground" prefetch={false}>
             Latest
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+          <Link href="/" className="text-muted-foreground hover:text-foreground" prefetch={false}>
             Portfolio
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+          <Link href="/" className="text-muted-foreground hover:text-foreground" prefetch={false}>
             About
           </Link>
         </nav>
