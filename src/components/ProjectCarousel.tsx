@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -8,18 +8,37 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { type CarouselApi } from "@/components/ui/carousel"
 import projects from '@/data/projects.json';
 
 export default function ProjectCarousel() {
+  const [api, setApi] = useState<CarouselApi>()
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
+  const nextProject = useCallback(() => {
+    if (api) {
+      api.scrollNext()
+    }
+  }, [api]);
 
-  const prevProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
-  };
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrentIndex(api.selectedScrollSnap())
+    api.on("select", () => {
+      setCurrentIndex(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextProject();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(intervalId);
+  }, [nextProject]);
 
   const project = projects[currentIndex];
 
@@ -27,7 +46,9 @@ export default function ProjectCarousel() {
     <Carousel className="w-full max-w-3xl mx-auto" opts={{
         align: "start",
         loop: true,
-      }}>
+      }}
+      setApi={setApi}
+    >
       <CarouselContent>
         {projects.map((project, index) => (
           <CarouselItem key={index}>

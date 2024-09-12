@@ -21,23 +21,23 @@ export default function PortfolioHero() {
       <div className="blob blob-2"></div>
       <div className="blob blob-3"></div>
       <div className="container px-4 md:px-6 relative z-10 pt-16">
-        <div className="flex flex-col items-center space-y-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter gradient-text">
+        <div className="flex flex-col items-center space-y-8 text-center mt-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter gradient-text ">
             Temel Lodos Durak
           </h1>
-          <p className="mx-auto max-w-[700px] text-xl text-muted-foreground">
-            Full Stack Developer | Cloud Engineer | DevOps Enthusiast
+          <p className="mx-auto max-w-[700px] text-xl text-foreground">
+            Full Stack Developer | Cloud Engineer | Automation Enthusiast
           </p>
-          <p className="mx-auto max-w-[800px] text-lg text-muted-foreground">
+          <p className="mx-auto max-w-[800px] text-lg text-foreground">
             Fall 2024 Software Engineering graduate with strong expertise in design, development, and testing. 
             Proficient in multiple programming languages and development frameworks, with hands-on experience 
             in full-stack development, database management, and cloud services.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg">
+            {/* <Button asChild size="lg">
               <Link href="#projects">View Projects</Link>
-            </Button>
-            <Button variant="secondary" size="lg" onClick={handleDownloadResume}>
+            </Button> */}
+            <Button size="lg" onClick={handleDownloadResume}>
               Download Resume
             </Button>
             <Button asChild variant="outline" size="lg">

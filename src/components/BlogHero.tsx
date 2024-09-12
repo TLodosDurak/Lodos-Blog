@@ -8,7 +8,7 @@ export default function BlogHero() {
             <div className="grid gap-4 px-4 md:gap-16">
               <div>
                 <h1 className="lg:leading-tighter text-6xl font-bold tracking-tighter mb-10 sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  Welcome to Lodos' Blog
+                  Welcome to Lodos&apos; Blog
                 </h1>
                 <p className="max-w-[500px] text-muted-foreground md:text-xl">
                   Explore a world of insights, creativity, and personal growth through the lens of Lodos' Blog.
