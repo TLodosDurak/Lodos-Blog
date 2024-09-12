@@ -11,7 +11,7 @@ export default function BlogHero() {
                   Welcome to Lodos&apos; Blog
                 </h1>
                 <p className="max-w-[500px] text-muted-foreground md:text-xl">
-                  Explore a world of insights, creativity, and personal growth through the lens of Lodos' Blog.
+                  Explore a world of insights, creativity, and personal growth through the lens of Lodos&apos; Blog.
                 </p>
               </div>
               <div className="flex flex-col items-start space-y-4 md:items-end md:justify-end md:space-y-0 md:space-x-4 md:flex-row">
