@@ -11,7 +11,7 @@
     "slug": "smart-wildlife-monitoring-camera",
     "title": "Smart Wildlife Monitoring Camera",
     "description": "Led a team to develop a solar-powered wildlife camera system using Raspberry Pi, YOLOv5, and delay tolerant Bluetooth data transfer for remote wildlife observation.",
-    "image": "wildlife_banner.png",
+    "image": "wildlife_banner.PNG",
     "technologies": ["Raspberry Pi", "YOLOv5", "Bluetooth", "Python", "Hardware Integration"],
     "link": "https://master--venerable-cactus-ebade9.netlify.app/"
   },
@@ -19,7 +19,7 @@
     "slug": "cybersecurity-ecommerce",
     "title": "Cybersecurity in E-Commerce",
     "description": "Designed and developed a secure e-commerce platform demo, implementing advanced encryption techniques and benchmarking various security methods.",
-    "image": "ecommerce_banner.png",
+    "image": "ecommerce_banner.PNG",
     "technologies": ["React", "DaisyUI", "bcrypt", "scrypt", "argon2ID", "Encryption"],
     "link": "https://ecommerce-blendjet.vercel.app/"
   },
@@ -27,7 +27,7 @@
     "slug": "pet-the-pup",
     "title": "Pet the Pup",
     "description": "Created a virtual dog petting web app using HTML, CSS, JavaScript, and Three.js for an interactive and fun user experience.",
-    "image": "petthepup_banner.png",
+    "image": "petthepup_banner.PNG",
     "technologies": ["HTML", "CSS", "JavaScript", "ThreeJS"],
     "link": "https://petthepup.replit.app/"
   }
