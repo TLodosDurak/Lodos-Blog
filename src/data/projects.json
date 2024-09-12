@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "automated-youtube-channel",
+    "title": "Automated YouTube Channel",
+    "description": "Developed an automated content generation system using a Raspberry Pi server and custom Python physics engine, resulting in 70K+ subscribers and 45 million+ views.",
+    "image": "/images/youtube-automation.jpg",
+    "technologies": ["Python", "Raspberry Pi", "Video Processing", "Automation"],
+    "link": "https://www.youtube.com/@top10countryrankings"
+  },
+  {
+    "slug": "smart-wildlife-monitoring-camera",
+    "title": "Smart Wildlife Monitoring Camera",
+    "description": "Led a team to develop a solar-powered wildlife camera system using Raspberry Pi, YOLOv5, and delay tolerant Bluetooth data transfer for remote wildlife observation.",
+    "image": "/images/wildlife-camera.jpg",
+    "technologies": ["Raspberry Pi", "YOLOv5", "Bluetooth", "Python", "Hardware Integration"],
+    "link": "https://github.com/TLodosDurak/wildlife-monitoring-camera"
+  },
+  {
+    "slug": "cybersecurity-ecommerce",
+    "title": "Cybersecurity in E-Commerce",
+    "description": "Designed and developed a secure e-commerce platform demo, implementing advanced encryption techniques and benchmarking various security methods.",
+    "image": "/images/secure-ecommerce.jpg",
+    "technologies": ["React", "DaisyUI", "bcrypt", "scrypt", "argon2ID", "Encryption"],
+    "link": "https://github.com/TLodosDurak/secure-ecommerce-demo"
+  },
+  {
+    "slug": "pet-the-pup",
+    "title": "Pet the Pup",
+    "description": "Created a virtual dog petting web app using HTML, CSS, JavaScript, and Three.js for an interactive and fun user experience.",
+    "image": "/images/pet-the-pup.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript", "Three.js"],
+    "link": "https://petthepup.replit.app/"
+  }
+]

@@ -8,9 +8,7 @@ export default function BlogLayout({
 }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <NavbarCustom />
-      <main className="flex-1 container mx-auto p-4">{children}</main>
-      <FooterCustom />
+      <main className="flex-1 container mx-auto pt-12 md:pt-24 lg:pt-32">{children}</main>
     </div>
   );
 }

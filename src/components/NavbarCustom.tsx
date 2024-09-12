@@ -1,61 +1,58 @@
+"use client"
+
 import Link from "next/link";
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { JSX, SVGProps } from "react";
 import AnimatedLogo from "./AnimatedLogo";
+import { ModeToggle } from "@/components/ModeToggle";
+import blogPosts from '@/data/blogPostsMeta.json';
 
 export default function NavbarCustom() {
+  const pathname = usePathname();
+  const isBlogPage = pathname.startsWith('/blog');
+  const pageTitle = isBlogPage ? "Lodos' Blog" : "Lodos' Portfolio";
+
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-2xl border-b-2">
+    <header className="fixed top-0 left-0 right-0 z-40 w-full backdrop-blur-2xl border-b-2 bg-background/20">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
-          <AnimatedLogo className="h-12 w-12" />
-          <span>Lodos' Blog</span>
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold group" prefetch={false}>
+          <AnimatedLogo className="h-12 w-12 text-foreground group-hover:animate-spin" />
+          <span className="group-hover:text-primary transition-colors">{pageTitle}</span>
         </Link>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="lg:hidden">
-              <MenuIcon className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="sm:max-w-xs">
-            <nav className="grid gap-6 text-lg font-medium">
-              <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
-                <HomeIcon className="h-5 w-5" />
-                Latest
-              </Link>
-              <Link
-                href="/"
-                className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                prefetch={false}
-              >
-                <BriefcaseIcon className="h-5 w-5" />
-                Portfolio
-              </Link>
-              <Link
-                href="/"
-                className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                prefetch={false}
-              >
-                <UserIcon className="h-5 w-5" />
-                About
-              </Link>
-            </nav>
-          </SheetContent>
-        </Sheet>
-        <nav className="hidden gap-6 text-sm font-medium lg:flex">
-          <Link href="/" className="text-foreground" prefetch={false}>
-            Latest
-          </Link>
-          <Link href="/" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-            Portfolio
-          </Link>
-          <Link href="/" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-            About
-          </Link>
-        </nav>
+        <div className="flex items-center gap-4">
+          <ModeToggle />
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="lg:hidden">
+                <MenuIcon className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            {/* <SheetContent side="right" className="sm:max-w-xs">
+              <nav className="grid gap-6 text-lg font-medium">
+                <Link href={`/blog/${blogPosts[0]["slug"]}`} className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
+                  <HomeIcon className="h-5 w-5" />
+                  Latest
+                </Link>
+                <Link href="/blog" className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
+                  <LassoIcon className="h-5 w-5" />
+                  Blog
+                </Link>
+              </nav>
+            </SheetContent> */}
+          </Sheet>
+          {/* <nav className="hidden gap-6 text-sm font-medium lg:flex">
+            <Link href={`/blog/${blogPosts[0]["slug"]}`} className="text-foreground hover:text-primary transition-colors" prefetch={false}>
+              Latest
+            </Link>
+            <Link href="/blog" className="text-foreground hover:text-primary transition-colors" prefetch={false}>
+              Blog
+            </Link>
+          </nav> */}
+        </div>
       </div>
     </header>
   );
