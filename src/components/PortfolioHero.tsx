@@ -6,10 +6,10 @@ import ProjectCarousel from "./ProjectCarousel"
 import NavbarCustom from "@/components/NavbarCustom"
 export default function PortfolioHero() {
   const handleDownloadResume = () => {
-    const resumeUrl = '/Temel Lodos Durak Resume.pdf';
+    const resumeUrl = '/Temel Lodos Durak - Resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Temel Lodos Durak Resume.pdf';
+    link.download = 'Temel Lodos Durak - Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
